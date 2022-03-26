@@ -531,6 +531,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 10px;
 }
 
 .cards-plan div h3{
@@ -572,4 +573,25 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.button-plan{
+    border: 3px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.button-plan p{
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-right: 4px;
+    font-weight: bold;
+}
+
+.arrow-plan{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: url(./assets/icons/orange-right-arrow.svg);
+    vertical-align: text-bottom;
 }
