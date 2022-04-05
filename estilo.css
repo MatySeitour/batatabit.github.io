@@ -214,7 +214,7 @@ main{
     background-color: var(--just-white);
     border-radius: 4px;
     padding: 20px 14px;
-    width: 200px;
+    width: 65%;
     height: auto;
     margin: 0 auto;
     margin-bottom: 50px;
@@ -231,19 +231,21 @@ main{
 }
 
 .main-grid-container{
+    background-color: #1A9AF7;
     width: 100%;
     border-radius: 4px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     height: auto;
     margin-bottom: 20px;
     background-color: var(--off-white);
 }
 
+
 .main-grid-container p{
     font-size: 1.3rem;
     padding: 10px 12px;
-    border-bottom: 1px solid var(--off-white);
+    border: 1px solid var(--just-white);
     color: var(--grey);
 }
 
@@ -251,7 +253,8 @@ main{
     color: #747474;
     text-align: left;
     border-right: 1px solid var(--off-white);
-}  
+}
+
 
 
 
@@ -263,7 +266,9 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left: 4px;
+    margin: auto;
+    padding: 10px;
+    animation: move 1s linear infinite alternate-reverse;
 }
 
 .coins-icon2{
@@ -274,7 +279,10 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left: 4px;
+    margin: auto;
+    padding: 10px;
+    animation: move 1s linear infinite alternate-reverse;
+   
 }
 
 .coins-icon3{
@@ -286,6 +294,10 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 4px;
+    margin: auto;
+    padding: 10px;
+    animation: move 1s linear infinite alternate-reverse;
+
 }
 
 .coins-icon4{
@@ -297,6 +309,22 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 4px;
+    margin: auto;
+    padding: 10px;
+    animation: move 1s linear infinite alternate-reverse;
+
+}
+
+@keyframes move{
+    0%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(-5px);
+    }
 }
 
 .main-date{
@@ -323,17 +351,33 @@ main{
     font-weight: 500;
 }
 
+.main-grid-container2{
+    background-color: #1A9AF7;
+    width: 100%;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    margin-bottom: 20px;
+    background-color: var(--off-white);
+}
+
+.main-grid-container2 p{
+    font-size: 1.3rem;
+    padding: 10px 12px;
+    border: 1px solid var(--just-white);
+    color: var(--grey);
+}
+
 .table-container2{
     background-color: var(--just-white);
     border-radius: 4px;
     padding: 20px 14px;
-    width: 200px;
+    width: 65%;
     height: auto;
     margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-bottom: 50px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
     display: none;
 }
 

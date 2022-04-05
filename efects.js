@@ -11,12 +11,28 @@ buton_right.addEventListener("click", () => {
     right.classList.remove("right-bye");
     tableComision.style.display ="inline-block";
     left.style.display ="inline-block";
+    tableCoins.style.display ="none";
 })
 
 buton_left.addEventListener("click", () => {
     right.classList.add("right-bye");
     tableComision.style.display ="none";
     left.style.display ="none";
+    tableCoins.style.display ="inline-block";
 
 })
 
+const fecha = () =>{
+    return new Promise((resolve, reject) =>{
+        if(true){
+            setTimeout((resolve) => {
+                resolve = "Actualizado: "
+                console.log(resolve + new Date())
+            }, 1000)
+        }
+    })
+}
+
+fecha().then(resolve => console.log(resolve));
+
+const rere = "hola";
