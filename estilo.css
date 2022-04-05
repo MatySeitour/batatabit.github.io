@@ -39,10 +39,28 @@ header{
     text-align: center;
 }
 
-header img {
+#logo-batata {
     width: 150px;
     height: 24px;
     margin-top: 60px;
+    transform: translateX(-300px);
+}
+
+.logo-effect{
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+    animation: logo .5s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logo{
+   0%{
+        transform: translateX(-300px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
 
 .header--title-container{
@@ -222,7 +240,6 @@ main{
 }
 
 
-
 .table-container h3{
     margin: 0 auto;
     margin-bottom: 10px;
@@ -327,6 +344,12 @@ main{
     }
 }
 
+@media only screen and (max-width: 350px){
+    .table-container, .table-container2{
+        width: 80%;
+    }
+}
+
 .main-date{
     color: var(--warm-black);
     text-align: center;
@@ -403,6 +426,19 @@ main{
     top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: logoMove 2s linear infinite alternate;
+}
+
+@keyframes logoMove{
+    0%{
+        transform: translate(-50%, -50%);
+    }
+    50%{
+        transform: translate(0, -50%);
+    }
+    100%{
+        transform: translate(-50%, -50%);
+    }
 }
 
 .main-product-detail{
