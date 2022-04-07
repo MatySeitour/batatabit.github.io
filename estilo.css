@@ -1,5 +1,4 @@
 
-
 *{
     margin: 0;
     padding: 0;
@@ -345,8 +344,8 @@ main{
 }
 
 @media only screen and (max-width: 350px){
-    .table-container, .table-container2{
-        width: 80%;
+    #comision-value1, #comision-value2, #comision-value3, #comision-value4{
+        font-size: 1rem;
     }
 }
 
@@ -566,8 +565,10 @@ main{
     width: 100%;
     height: auto;
     text-align: center;
-    margin-top: 30px;
+    padding-top: 20px;
     padding-bottom: 70px;
+    background-color: var(--off-white);
+    position: relative;
 }
 
 .products-plan--container{
@@ -607,14 +608,27 @@ main{
     width: 50%;
     height: 288px;
     border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.16), 0px 5px 10px rgba(0, 0, 0, 0.16);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 10px;
+    transform: translateX(50%);
 }
 
-.cards-plan div h3{
+.cards-plan2{
+    width: 50%;
+    height: 288px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.16), 0px 5px 10px rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    transform: translateX(300px);
+}
+
+.cards-plan div h3, .cards-plan2 div h3{
     margin-top: 10px;
     font-size: 1.6rem;
     font-weight: 600;
@@ -647,7 +661,7 @@ main{
     color: #E7F5FF;
 }
 
-.cards-plan div{
+.cards-plan div, .cards-plan2 div{
     height: 100%;
     width: 100%;
     display: flex;
@@ -674,4 +688,66 @@ main{
     width: 20px;
     background-image: url(./assets/icons/orange-right-arrow.svg);
     vertical-align: text-bottom;
+}
+
+.arrow-right__plan{
+    border: none;
+    width: 20px;
+    height: 20px;
+    pointer-events: unset;
+    background-image: url(./assets/icons/right-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--off-white);
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    cursor: pointer;
+    transition: transform .2s;
+    line-height: 50%;
+}
+
+.arrow-left__plan{
+    border: none;
+    width: 20px;
+    height: 20px;
+    pointer-events: unset;
+    background-image: url(./assets/icons/right-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--off-white);
+    transform: rotate(180deg);
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    cursor: pointer;
+    transition: transform .2s;
+    line-height: 50%;
+}
+
+.card1-show{
+    transition: transform .3s linear;
+    transform: translateX(-300px);
+}
+
+.card1-hide{
+    transition: transform .3s linear;
+    transition-delay: .3;
+    transform: translateX(50%);
+}
+
+.card2-show{
+    transition: all .3s linear;
+    transition-delay: .3s;
+    display: inline-block;
+    transform: translateX(-50%);
+}
+
+.card2-hide{
+    transition: all .3s linear;
+    transition-delay: .3s;
+    display: inline-block;
+    transform: translateX(300px);
 }
