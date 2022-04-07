@@ -55,8 +55,10 @@ const yearplan = document.querySelector(".cards-plan");
 const monthlyplan = document.querySelector(".cards-plan2");
 const arrowLeftPlan = document.querySelector(".arrow-left__plan");
 const arrowRightPlan = document.querySelector(".arrow-right__plan");
-arrowLeftPlan.style.display="none";
+let arrowState = false;
 
+
+arrowLeftPlan.style.display="none";
 yearplan.classList.remove("card1-show");
 yearplan.classList.remove("card1-hide");
 monthlyplan.classList.remove("card2-show");
@@ -64,14 +66,19 @@ monthlyplan.classList.remove("card2-hide");
 
 
 arrowRightPlan.onclick = () =>{
-    yearplan.classList.add("card1-show");
-    monthlyplan.classList.add("card2-show");
-    arrowRightPlan.style.display="none";
-    arrowLeftPlan.style.display="inline-block";
+        yearplan.classList.add("card1-show");
+        monthlyplan.classList.add("card2-show");
+        arrowRightPlan.style.display="none";
+        arrowLeftPlan.style.display="inline-block";
+        monthlyplan.classList.remove("card2-hide");
+        yearplan.classList.remove("card1-hide");
 }
 
 arrowLeftPlan.onclick = () =>{
-    yearplan.classList.remove("card1-show");
-    monthlyplan.classList.remove("card2-show");
-    yearplan.classList.add("card1-hide");
+        yearplan.classList.remove("card1-show");
+        monthlyplan.classList.remove("card2-show");
+        arrowRightPlan.style.display="inline-block";
+        arrowLeftPlan.style.display="none";
+        monthlyplan.classList.add("card2-hide");
+        yearplan.classList.add("card1-hide");
 }
