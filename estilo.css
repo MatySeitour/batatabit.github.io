@@ -169,6 +169,9 @@ main{
 
 .main-tables-container{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .left-arrow-tables{
@@ -189,7 +192,6 @@ main{
     display: none;
     transition: transform .2s;
     line-height: 50%;
-
 }
 
 .left-arrow-tables:hover{
@@ -231,15 +233,26 @@ main{
     background-color: var(--just-white);
     border-radius: 4px;
     padding: 20px 14px;
-    width: 65%;
+    width: 100%;
     height: auto;
+    min-height: 288px;
     margin: 0 auto;
     margin-bottom: 50px;
     box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    transform: translateX(45%);
 }
 
+.table1--show{
+    transition: transform .3s linear;
+    transform: translateX(-400px);
+}
 
-.table-container h3{
+.table1--hide{
+    transition: transform .3s linear;
+    transform: translateX(45%);
+}
+
+.table-title{
     margin: 0 auto;
     margin-bottom: 10px;
     font-size: 1.3rem;
@@ -247,18 +260,18 @@ main{
 }
 
 .main-grid-container{
-    background-color: #1A9AF7;
     width: 100%;
     border-radius: 4px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr minmax(50px, 1fr);
     height: auto;
     margin-bottom: 20px;
     background-color: var(--off-white);
 }
 
 
-.main-grid-container p{
+
+.name-coins, #coin-value1, #coin-value2, #coin-value3, #coin-value4{
     font-size: 1.3rem;
     padding: 10px 12px;
     border: 1px solid var(--just-white);
@@ -266,13 +279,10 @@ main{
 }
 
 .name-coins{
-    color: #747474;
+    color: var(--grey);
     text-align: left;
     border-right: 1px solid var(--off-white);
 }
-
-
-
 
 .coins-icon1{
     display: inline-block;
@@ -364,7 +374,7 @@ main{
 .main-date2{
     color: var(--warm-black);
     text-align: center;
-    width: 90%;
+    width: 100%;
     border-radius: 8px;
     margin: 0 auto;
     padding: 8px;
@@ -395,12 +405,22 @@ main{
     background-color: var(--just-white);
     border-radius: 4px;
     padding: 20px 14px;
-    width: 65%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     margin-bottom: 50px;
     box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
-    display: none;
+    transform: translateX(450px);
+}
+
+.table2--show{
+    transition: transform .3s linear;
+    transform: translateX(-54%);
+}
+
+.table2--hide{
+    transition: transform .3s linear;
+    transform: translateX(450px);
 }
 
 

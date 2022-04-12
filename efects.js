@@ -16,21 +16,27 @@ const tableComision = document.querySelector(".table-container2");
 const mainDate = document.querySelector(".main-date");
 const mainDate2 = document.querySelector(".main-date2");
 left.classList.remove("left-bye");
+tableCoins.classList.remove("table1--show");
+tableCoins.classList.remove("table1--hide");
+tableComision.classList.remove("table2--show");
+tableComision.classList.remove("table2--hide");
 
 
 buton_right.addEventListener("click", () => {
     right.classList.remove("right-bye");
-    tableComision.style.display ="inline-block";
+    tableComision.classList.add("table2--show");
     left.style.display ="inline-block";
-    tableCoins.style.display ="none";
+    tableCoins.classList.add("table1--show");
+    tableCoins.classList.remove("table1--hide");
+    tableComision.classList.remove("table2--hide");
 })
 
 buton_left.addEventListener("click", () => {
     right.classList.add("right-bye");
-    tableComision.style.display ="none";
     left.style.display ="none";
     tableCoins.style.display ="inline-block";
-
+    tableComision.classList.add("table2--hide");
+    tableCoins.classList.add("table1--hide");
 })
 
 // DATE TABLE 1
