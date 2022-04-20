@@ -759,7 +759,7 @@ main{
 
 /* MODAL PLANS*/
 
-/* .modal-plans{
+.modal-plans{
     position: fixed;
     top: 0;
     right: 0;
@@ -770,6 +770,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
     opacity: 0;
     transition: opacity .6s;
     --transform: translateY(-100vh);
@@ -783,12 +784,24 @@ main{
     --transform: translateY(0);
 }
 
+.modal-cierre{
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    padding: 8px;
+    font-size: 1.7rem;
+    border-radius: 13px;
+    text-decoration: none;
+    color: var(--bitcoin-orange);
+}
+
 .modal-container{
+    position: relative;
     width: 80%;
     height: 80%;
     transform: var(--transform);
     transition: var(--transition);
-} */
+}
 
 /* INPUT MODAL */
 
@@ -801,8 +814,9 @@ main{
 form{
     background-color: var(--off-white);
     width: 100%;
-    height: 100%;
+    height: 90%;
     border-radius: 20px;
+    padding-bottom: 10px;
 }
 
 .methods-container{
@@ -812,25 +826,40 @@ form{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #F7931A;
-}
-
-label{
-    font-size: 1.6rem;
+    padding-left: 10px;
 }
 
 input{
-    margin: 20px 0;
-    font-size: 1.5rem;
-    padding: 6px;
-    width: 80%;
-    border: none;
+    outline: none;
+    padding: 3px;
     border-radius: 4px;
+    width: 70%;
+    margin-top: 6px;
+    border: 1px solid var(--bitcoin-orange);
+    color: var(--warm-black);
+    text-align: center;
 }
 
-input:focus{
-    background-color: #eee;
-    outline: none;
+.input-submit{
+    background-color: var(--bitcoin-orange);
+    color: var(--just-white);
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+}
+label{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #F7931A;
+    margin-top: 20px;
+}
+
+.choose-methods{
+    width: 100%;
 }
 
 /* FOOTER */
