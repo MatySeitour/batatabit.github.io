@@ -37,35 +37,62 @@ function fetchData(url_api, callback){
 }
 
 
-fetchData(API, (error1, data1) =>{
-    if(error1){
-        return console.error(error1)
+const callApi = async (n) =>{
+    try{
+        if(n === 1){
+            const response = await fetch(API);
+            const data = response.json();
+            return data;
+        }
+        else if(n === 2){
+            const response = await fetch(API2);
+            const data = response.json();
+            return data;
+        }
+        else if(n === 3){
+            const response = await fetch(API3);
+            const data = response.json();
+            return data;
+        }
+        else{
+            const response = await fetch(API4);
+            const data = response.json();
+            return data;
+        }
     }
-    btcprice.innerHTML = "$" + data1.bitex.ask;
+    catch(error){
+        console.error(error);
+    }
 
-    fetchData(API2, (error2, data2) =>{
-        if(error2){
-            return console.error(error2)
-        }
-        ethprice.innerHTML = "$" + data2.bitex.ask
-    })
+}
 
-    fetchData(API3, (error3, data3) =>{
-        if(error3){
-            return console.error(error3)
-        }
-        solprice.innerHTML = "$" + data3.tiendacrypto.ask
-    })
-    fetchData(API4, (error4, data4) =>{
-        if(error4){
-            return console.error(error4)
-        }
-        daiprice.innerHTML = "$" + data4.buenbit.ask
-    })
-});
+function datos(n){
+    console.log(n);
+    btcprice.innerHTML = "$" + n.bitex.ask;
+}
+
+function datos2(n){
+    console.log(n);
+    ethprice.innerHTML = "$" + n.bitex.ask
+}
+
+function datos3(n){
+    console.log(n);
+    solprice.innerHTML = "$" + n.tiendacrypto.ask
+}
+
+function datos4(n){
+    console.log(n);
+    daiprice.innerHTML = "$" + n.buenbit.ask
+}
+
+callApi(1).then(datos);
+callApi(2).then(datos2);
+callApi(3).then(datos3);
+callApi(4).then(datos4);
 
 
-// 
+
 
 
 fetchData(comisionAPI, (errro1, data1) =>{
@@ -78,5 +105,3 @@ fetchData(comisionAPI, (errro1, data1) =>{
     ripio.innerHTML = "$ " + data1.Ripio.BTC.BITCOIN;
     buenbit.innerHTML = "$ " + data1.Buenbit.BTC.BITCOIN;
 });
-
-
