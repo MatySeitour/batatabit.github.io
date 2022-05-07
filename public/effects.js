@@ -45,7 +45,9 @@ const date = new Date().toString();
 
 const dateArr = date.split(" ");
 
-mainDate.innerHTML = "<b>Actualizado : </b>" + dateArr[2] + " " + dateArr[1] + " " + dateArr[4];
+mainDate.innerHTML = `<b>Actualizado: </b> ${dateArr[2]} ${dateArr[1]} ${dateArr[4]}`
+
+// "<b>Actualizado : </b>" + dateArr[2] + " " + dateArr[1] + " " + dateArr[4];
 
 // DATE TABLE 2
 
