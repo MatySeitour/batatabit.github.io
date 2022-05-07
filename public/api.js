@@ -67,22 +67,18 @@ const callApi = async (n) =>{
 }
 
 function datos(n){
-    console.log(n);
     btcprice.innerHTML = "$" + n.bitex.ask;
 }
 
 function datos2(n){
-    console.log(n);
     ethprice.innerHTML = "$" + n.bitex.ask
 }
 
 function datos3(n){
-    console.log(n);
     solprice.innerHTML = "$" + n.tiendacrypto.ask
 }
 
 function datos4(n){
-    console.log(n);
     daiprice.innerHTML = "$" + n.buenbit.ask
 }
 
@@ -99,7 +95,6 @@ fetchData(comisionAPI, (errro1, data1) =>{
     if(errro1){
         console.log(errro1)
     }
-    console.log(data1);
     binance.innerHTML = "$ " + data1.Binance.BTC.BITCOIN;
     lemoncash.innerHTML = "$ " + data1.LemonCash.BTC.BITCOIN;
     ripio.innerHTML = "$ " + data1.Ripio.BTC.BITCOIN;
