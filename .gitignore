@@ -1,2 +1,3 @@
-node_modules
-assets
+# Node_modules and assets
+node_modules/
+public/assets
