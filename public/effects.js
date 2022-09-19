@@ -3,7 +3,7 @@ const logo = document.getElementById("logo-batata");
 let sizeScreen = window.innerHeight / 1
 let position = logo.getBoundingClientRect().top;
 
-window.onload = function(){
+window.onload = function () {
         logo.classList.add("logo-effect");
 }
 
@@ -23,20 +23,20 @@ tableComision.classList.remove("table2--hide");
 
 
 buton_right.addEventListener("click", () => {
-    right.classList.remove("right-bye");
-    tableComision.classList.add("table2--show");
-    left.style.display ="inline-block";
-    tableCoins.classList.add("table1--show");
-    tableCoins.classList.remove("table1--hide");
-    tableComision.classList.remove("table2--hide");
+        right.classList.remove("right-bye");
+        tableComision.classList.add("table2--show");
+        left.style.display = "inline-block";
+        tableCoins.classList.add("table1--show");
+        tableCoins.classList.remove("table1--hide");
+        tableComision.classList.remove("table2--hide");
 })
 
 buton_left.addEventListener("click", () => {
-    right.classList.add("right-bye");
-    left.style.display ="none";
-    tableCoins.style.display ="inline-block";
-    tableComision.classList.add("table2--hide");
-    tableCoins.classList.add("table1--hide");
+        right.classList.add("right-bye");
+        left.style.display = "none";
+        tableCoins.style.display = "inline-block";
+        tableComision.classList.add("table2--hide");
+        tableCoins.classList.add("table1--hide");
 })
 
 // DATE TABLE 1
@@ -66,27 +66,27 @@ const arrowRightPlan = document.querySelector(".arrow-right__plan");
 let arrowState = false;
 
 
-arrowLeftPlan.style.display="none";
+arrowLeftPlan.style.display = "none";
 yearplan.classList.remove("card1-show");
 yearplan.classList.remove("card1-hide");
 monthlyplan.classList.remove("card2-show");
 monthlyplan.classList.remove("card2-hide");
 
 
-arrowRightPlan.onclick = () =>{
+arrowRightPlan.onclick = () => {
         yearplan.classList.add("card1-show");
         monthlyplan.classList.add("card2-show");
-        arrowRightPlan.style.display="none";
-        arrowLeftPlan.style.display="inline-block";
+        arrowRightPlan.style.display = "none";
+        arrowLeftPlan.style.display = "inline-block";
         monthlyplan.classList.remove("card2-hide");
         yearplan.classList.remove("card1-hide");
 }
 
-arrowLeftPlan.onclick = () =>{
+arrowLeftPlan.onclick = () => {
         yearplan.classList.remove("card1-show");
         monthlyplan.classList.remove("card2-show");
-        arrowRightPlan.style.display="inline-block";
-        arrowLeftPlan.style.display="none";
+        arrowRightPlan.style.display = "inline-block";
+        arrowLeftPlan.style.display = "none";
         monthlyplan.classList.add("card2-hide");
         yearplan.classList.add("card1-hide");
 }
@@ -98,12 +98,12 @@ const planSelect = document.querySelector(".button-plan");
 const modalCierre = document.querySelector(".modal-cierre");
 let modalstate = false;
 
-planSelect.onclick = (e) =>{
+planSelect.onclick = (e) => {
         e.preventDefault();
         modal.classList.add("modal--mostrar");
 }
 
-modalCierre.onclick = (e) =>{
+modalCierre.onclick = (e) => {
         e.preventDefault();
         modal.classList.remove("modal--mostrar");
 }
